@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planlayıcı Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Animasyonlu arka plan -->
+<div class="airplane-animation"></div>
+<div class="dolphin"></div>
+<div class="waves"></div>
+
+<div class="app">
+
+    <header>
+        <h1>Planlayıcı Pro</h1>
+        <button id="themeToggle">🌙</button>
+    </header>
+
+    <div id="calendar"></div>
+
+    <section class="day-panel">
+        <h2>Seçilen Gün: <span id="selectedDateLabel"></span></h2>
+
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Görev yaz...">
+            <select id="taskCategory">
+                <option value="iş">İş</option>
+                <option value="kişisel">Kişisel</option>
+                <option value="spor">Spor</option>
+                <option value="okul">Okul</option>
+                <option value="alışkanlık">Alışkanlık</option>
+            </select>
+            <button id="addTaskBtn">Ekle</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </section>
+
+    <section class="stats">
+        <h2>📊 İstatistikler</h2>
+        <p>Zincir Uzunluğu: <span id="chainCount">0</span></p>
+        <canvas id="weekCanvas" width="400" height="120"></canvas>
+        <canvas id="monthCanvas" width="400" height="120"></canvas>
+    </section>
+
+    <section class="ai-section">
+        <h2>🤖 Haftalık Özet</h2>
+        <button id="runAI">Özet Oluştur</button>
+        <p id="aiResult"></p>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
